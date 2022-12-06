@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 });
 
 router.patch("/", async (req, res) =>{
-  const {ticked} = req.body
+  const ticked = req.body
   const result = await completedItem(ticked)
   res.status(201).json({ success: true, payload: result });
 })
